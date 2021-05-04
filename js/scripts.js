@@ -20,10 +20,19 @@ $(document).ready(function() {
     favThings.push(userInfo[4]);
     
     $('#userName').text(name);
-    $('#first').text(favThings[0])
-    $('#second').text(favThings[1])
-    $('#third').text(favThings[2])
-    $('#fourth').text(favThings[3])
+    $('#first').text(favThings[0]);
+    $('#second').text(favThings[1]);
+    $('#third').text(favThings[2]);
+    $('#fourth').text(favThings[3]);
+
+    $('ul#all').append(`<li>${favThings[0]}</li>`);
+    $('ul#all').append(`<li>${favThings[1]}</li>`);
+    $('ul#all').append(`<li>${favThings[2]}</li>`);
+    $('ul#all').append(`<li>${favThings[3]}</li>`);
+
+    favThings.forEach(function(element) {
+      $('ul#all').append(`<li>${element}</li>`);
+    })
     $('#info').hide();
     $('#list').show();
   })
